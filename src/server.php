@@ -10,7 +10,13 @@ function isHttps() {
 }
 
 // currentUrl
+// Dependencies: isHttps
 function currentUrl() {
   $protocol = isHttps() ? 'https' : 'http';
   return "$protocol://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+}
+
+// uriToUrl
+function uriToUrl($uri, $root) {
+  return ($uri == '') ? $root : $root . '/' . $uri;
 }

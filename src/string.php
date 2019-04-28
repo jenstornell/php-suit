@@ -49,6 +49,12 @@ function between($content, $start, $end){
   return '';
 }
 
+// skipZeros
+// https://stackoverflow.com/a/47669434/148496
+function stripZeros($value) {
+  return sprintf("%s\n", (float)$value);
+}
+
 // slug
 function slug($string) {
   return strtolower(
