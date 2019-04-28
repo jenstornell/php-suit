@@ -1,8 +1,5 @@
 <?php
-namespace Suit;
 include __DIR__ . '/../src/suit.php';
-
-#use Suit as suit;
 
 // Array
 $clean = clean(['a', '', 0, null, 'b']);
@@ -15,11 +12,14 @@ $last = last(['a', 'b']);
 if($last != 'b') echo 'last';
 
 // File
+$files = files(__DIR__ . '/folder', 'files', '/\.txt$/');
+if(count($files) != 1) echo 'file';
+
 if(path('this\\is\\a/path.txt') != 'this\is\a\path.txt')
 echo 'path';
 
-$paths = recursiveFolders(__DIR__ . '/folder');
-if(count($paths) != 2) echo 'recursiveFolders';
+$rfiles = rfiles(__DIR__ . '/folder', 'files', '/\.txt$/');
+if(count($rfiles) != 2) echo 'rfiles';
 
 // Server
 

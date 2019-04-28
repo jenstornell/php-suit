@@ -29,8 +29,12 @@ last(array $array)
 ### File
 
 ```php
-// Returna a recursive folders as array
-recursiveFolders(string $path);
+// Return an array with files and/or folders
+// $type is `'files'`, `'folders'` or `null` (which is both)
+// $regex is an optional regular expression like `'/\.txt$/'`
+// Use rfiles for getting files and/or folders recursively
+files(string $path, string $type, string $regex);
+rfiles(string $path, string $type, string $regex);
 
 // Like realpath but does always return a path
 path(string $path);
@@ -96,6 +100,10 @@ use suit as s;
 
 echo s\slug('Åäö');
 ```
+
+## Similar libraries
+
+- https://github.com/JBZoo/Utils
 
 ## Donate
 
