@@ -1,14 +1,15 @@
-# PHP Suit - A collection of helper functions
+# PHP Suit
 
 *Version 1.0* - [Changelog](changelog.md)
 
-The missing PHP functions.
+The missing PHP functions. Grab the whole library, or just pick the function you need.
 
 ## In short
 
 - Small library, compared to others, for example [JBZoo Utils](https://github.com/JBZoo/Utils)
 - The function names are as short as possible
-- Unique, no duplicates of already existing PHP functions
+- The function names uses underscores just like native PHP
+- No duplicates of already existing PHP functions
 - No dependencies
 
 ## Functions
@@ -45,23 +46,23 @@ path(string $path);
 
 ```php
 // Return the current url
-currentUrl();
+current_url();
 
 // Check if https or not
-isHttps();
+is_https();
 
 // Check if localhost or not
-isLocalhost(array ['127.0.0.1', '::1']);
+is_localhost(array ['127.0.0.1', '::1']);
 ```
 
 ### String
 
 ```php
 // Check if $haystack starts with the text in the $needle
-startsWith(array $haystack, string $needle);
+starts_with(array $haystack, string $needle);
 
 // Check if $haystack ends with the text in the $needle
-endsWith(array $haystack, string $needle);
+ends_with(array $haystack, string $needle);
 
 // Check if $haystack contains the text in the $needle
 contains(string $needle, array $haystack);
@@ -74,9 +75,6 @@ obfuscate(string $email);
 
 // Remove whitespace from a string
 strip(string $string);
-
-// Remove ending zeroes from a value
-stripZeros(string);
 
 // Convert $string to slug
 slug(string $string);
@@ -105,6 +103,7 @@ echo s\slug('Åäö');
 ## Similar libraries
 
 - https://github.com/JBZoo/Utils
+- https://github.com/clausnz/php-helpers
 
 ## Donate
 

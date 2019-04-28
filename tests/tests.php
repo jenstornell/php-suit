@@ -23,12 +23,12 @@ if(count($rfiles) != 2) echo 'rfiles';
 
 // Server
 
-if(currentUrl() != 'http://localhost/misc/suit/tests/tests.php')
+if(current_url() != 'http://localhost/misc/suit/tests/tests.php')
 echo 'currentUrl';
 
-if(isHttps() === true) echo 'isHttps';
+if(is_https() === true) echo 'isHttps';
 
-if(isLocalhost() === false) echo 'isLocalhost';
+if(is_localhost() === false) echo 'isLocalhost';
 
 // String
 
@@ -38,7 +38,7 @@ if($between != 'lo wor') echo 'between';
 $contains = contains('ello', 'Hello World');
 if($contains === false) echo 'contains';
 
-$endswith = endsWith('Hello world', 'rld');
+$endswith = ends_with('Hello world', 'rld');
 if($endswith === false) echo 'endsWith';
 
 $email = obfuscate('hello@example.com');
@@ -48,7 +48,7 @@ echo 'email';
 $slug = slug('Åäö');
 if($slug != 'aao') echo 'slug';
 
-$startswith = startsWith('Hello world', 'Hell');
+$startswith = starts_with('Hello world', 'Hell');
 if($startswith === false) echo 'startswith';
 
 
@@ -56,11 +56,5 @@ if($startswith === false) echo 'startswith';
 // strip
 function strip($string) {
   return preg_replace('/\s+/', '', $string);
-}
-
-// skipZeros
-// https://stackoverflow.com/a/47669434/148496
-function stripZeros($value) {
-  return sprintf("%s\n", (float)$value);
 }
 */

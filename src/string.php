@@ -18,7 +18,7 @@ function contains($needle, $haystack) {
 
 //  endsWith
 // https://stackoverflow.com/a/834355/148496
-function endsWith($haystack, $needle) {
+function ends_with($haystack, $needle) {
   $length = strlen($needle);
   if($length == 0) return true;
   return (substr($haystack, -$length) === $needle);
@@ -61,17 +61,11 @@ function slug($string) {
 
 // startsWith
 // https://stackoverflow.com/a/834355/148496
-function startsWith($haystack, $needle) {
+function starts_with($haystack, $needle) {
   return (substr($haystack, 0, strlen($needle)) === $needle);
 }
 
 // strip
 function strip($string) {
   return preg_replace('/\s+/', '', $string);
-}
-
-// skipZeros
-// https://stackoverflow.com/a/47669434/148496
-function stripZeros($value) {
-  return sprintf("%s\n", (float)$value);
 }
