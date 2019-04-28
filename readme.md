@@ -29,57 +29,56 @@ last(array $array)
 ### File
 
 ```php
-// Returns recursive folders as array
+// Returna a recursive folders as array
 recursiveFolders(string $path);
 
-// Like realpath but always return a path
-// https://www.php.net/manual/en/function.realpath.php
+// Like realpath but does always return a path
 path(string $path);
 ```
 
 ### Server
 
 ```php
-// Returns the current url
+// Return the current url
 currentUrl();
 
-// Returns true or false depending if the host is https or not
+// Check if https or not
 isHttps();
 
-// Returns true or false depending on if the host is localhost or not
+// Check if localhost or not
 isLocalhost(array ['127.0.0.1', '::1']);
 ```
 
 ### String
 
 ```php
-// Return string between two strings
-between(string $content, string $start, string );
+// Check if $haystack starts with the text in the $needle
+startsWith(array $haystack, string $needle);
 
-// Returns true or false depending on if the string is found in another string
-contains(string $needle, array $haystack);
-
-// Returns true or false depending on if the string ends with it
+// Check if $haystack ends with the text in the $needle
 endsWith(array $haystack, string $needle);
 
-// Return an obfuscated email address
+// Check if $haystack contains the text in the $needle
+contains(string $needle, array $haystack);
+
+// Return a string between $start and $end
+between(string $content, string $start, string $end);
+
+// Returns an obfuscated email address
 obfuscate(string $email);
 
 // Remove whitespace from a string
-removeWhitespace(string $string);
-
-// Alias for [strtr](https://www.php.net/manual/en/function.strtr.php)
-replace(array $mixed);
-replace(string $from, string $to);
-
-// Returns true or false depending on if the string starts with it
-startsWith(array $haystack, string $needle);
-
-// Convert $string to slug
-slug(string $string);
+strip(string $string);
 
 // Remove ending zeroes from a value
 stripZeros(string);
+
+// Alias for strtr
+replace(array $mixed);
+replace(string $from, string $to);
+
+// Convert $string to slug
+slug(string $string);
 ```
 
 ## Donate

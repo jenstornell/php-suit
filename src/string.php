@@ -28,8 +28,8 @@ function endsWith($haystack, $needle) {
   return (substr($haystack, -$length) === $needle);
 }
 
-// removeWhitespace
-function removeWhitespace($string) {
+// strip
+function strip($string) {
   return preg_replace('/\s+/', '', $string);
 }
 
