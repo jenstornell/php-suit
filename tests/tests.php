@@ -34,62 +34,22 @@ if($between != 'lo wor') echo 'between';
 
 $contains = contains('ello', 'Hello World');
 if($contains === false) echo 'contains';
+
+$endswith = endsWith('Hello world', 'rld');
+if($endswith === false) echo 'endsWith';
+
+$email = obfuscate('hello@example.com');
+if($email != '&#104;&#101;&#108;&#108;&#111;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;')
+echo 'email';
+
+$slug = slug('Åäö');
+if($slug != 'aao') echo 'slug';
+
+$startswith = startsWith('Hello world', 'Hell');
+if($startswith === false) echo 'startswith';
+
+
 /*
-
-//  endsWith
-// https://stackoverflow.com/a/834355/148496
-function endsWith($haystack, $needle) {
-  $length = strlen($needle);
-  if($length == 0) return true;
-  return (substr($haystack, -$length) === $needle);
-}
-
-// obfuscate email
-function obfuscate($email) {
-    $out = '';
-    for($i=0; $i < strlen($email); $i++){
-        $out .= "&#" . ord($email[$i]) . ";";
-    }
-    return $out;
-}
-
-// replace
-function replace($string, $from, $to) {
-  return strtr($string, $from, $to);
-}
-
-// slug
-function slug($string) {
-  return strtolower(
-    trim(
-      preg_replace(
-          '~[^0-9a-z]+~i',
-          '-',
-          html_entity_decode(
-          preg_replace(
-              '~&([a-z]{1,2})(?:acute|cedil|circ|grave|lig|orn|ring|slash|th|tilde|uml);~i',
-              '$1',
-              htmlentities(
-              $string,
-              ENT_QUOTES,
-              'UTF-8'
-              )
-          ),
-          ENT_QUOTES,
-          'UTF-8'
-          )
-      ),
-      '-'
-      )
-  );
-}
-
-// startsWith
-// https://stackoverflow.com/a/834355/148496
-function startsWith($haystack, $needle) {
-  return (substr($haystack, 0, strlen($needle)) === $needle);
-}
-
 // strip
 function strip($string) {
   return preg_replace('/\s+/', '', $string);

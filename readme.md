@@ -73,10 +73,6 @@ strip(string $string);
 // Remove ending zeroes from a value
 stripZeros(string);
 
-// Alias for strtr
-replace(array $mixed);
-replace(string $from, string $to);
-
 // Convert $string to slug
 slug(string $string);
 ```

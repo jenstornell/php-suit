@@ -33,11 +33,6 @@ function obfuscate($email) {
     return $out;
 }
 
-// replace
-function replace($string, $from, $to) {
-  return strtr($string, $from, $to);
-}
-
 // slug
 function slug($string) {
   return strtolower(
