@@ -1,4 +1,4 @@
-# Suit
+# PHP Suit - A collection of helper functions
 
 *Version 1.0* - [Changelog](changelog.md)
 
@@ -32,8 +32,9 @@ last(array $array)
 // Return an array with files and/or folders
 // $type is `'files'`, `'folders'` or `null` (which is both)
 // $regex is an optional regular expression like `'/\.txt$/'`
-// Use rfiles for getting files and/or folders recursively
 files(string $path, string $type, string $regex);
+
+// Same as above but for getting files and/or folders recursively
 rfiles(string $path, string $type, string $regex);
 
 // Like realpath but does always return a path
