@@ -11,11 +11,7 @@ A small collection of helper functions.
 | cleanArray | (array) $array | Clean up array from empty values |
 | first      | (array) $array | Returns the first value of an array |
 | last       | (array) $array | Returns the last value of an array |
-
-### File
-
-| Name             | Params         | Description |
-| ---------------- | -------------- | ----------- |
+| **File** | | |
 | recursiveFolders | (string) $path | Returns recursive folders as array |
 | read             | (string) $url  | Returns file contents or false
 | path             | (string) $path | Like [https://www.php.net/manual/en/function.realpath.php](realpath) but always return a path
