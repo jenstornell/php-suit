@@ -1,20 +1,40 @@
 <?php
-// between
-// https://tonyspiro.com/using-php-to-get-a-string-between-two-strings/
-function between($content, $start, $end){
-  $r = explode($start, $content);
-  if (isset($r[1])) {
-      $r = explode($end, $r[1]);
-      return $r[0];
-  }
-  return '';
-}
+include __DIR__ . '/../src/suit.php';
 
-// contains
-// https://stackoverflow.com/a/7112596/148496
-function contains($needle, $haystack) {
-  return strpos($haystack, $needle) !== false;
-}
+// Array
+$clean = clean(['a', '', 0, null, 'b']);
+if(count($clean) != 2) echo 'clean';
+
+$first = first(['a', 'b']);
+if($first != 'a') echo 'first';
+
+$last = last(['a', 'b']);
+if($last != 'b') echo 'last';
+
+// File
+if(path('this\\is\\a/path.txt') != 'this\is\a\path.txt')
+echo 'path';
+
+$paths = recursiveFolders(__DIR__ . '/folder');
+if(count($paths) != 2) echo 'recursiveFolders';
+
+// Server
+
+if(currentUrl() != 'http://localhost/misc/suit/tests/tests.php')
+echo 'currentUrl';
+
+if(isHttps() === true) echo 'isHttps';
+
+if(isLocalhost() === false) echo 'isLocalhost';
+
+// String
+
+$between = between('Hello world', 'el', 'ld');
+if($between != 'lo wor') echo 'between';
+
+$contains = contains('ello', 'Hello World');
+if($contains === false) echo 'contains';
+/*
 
 //  endsWith
 // https://stackoverflow.com/a/834355/148496
@@ -80,3 +100,4 @@ function strip($string) {
 function stripZeros($value) {
   return sprintf("%s\n", (float)$value);
 }
+*/
