@@ -11,7 +11,7 @@ function last($array) {
 
 // cleanArray from empty values
 // https://stackoverflow.com/a/3654309/148496
-function cleanArray($array) {
+function clean($array) {
   $clean = array_filter($array); 
   return $clean;
 }

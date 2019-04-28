@@ -15,30 +15,72 @@ The missing PHP functions.
 
 ### Array
 
-| Name       | Params         | Description |
-| ---------- | -------------- | ----------- |
-| **ARRAY** | | |
-| cleanArray | (array) $array | Clean up array from empty values |
-| first      | (array) $array | Returns the first value of an array |
-| last       | (array) $array | Returns the last value of an array |
-| **FILE** | | |
-| recursiveFolders | (string) $path | Returns recursive folders as array |
-| read             | (string) $url  | Returns file contents or false
-| path             | (string) $path | Like [realpath](https://www.php.net/manual/en/function.realpath.php) but always return a path
-| **SERVER**
-| currentUrl       | -              | Returns the current url |
-| isHttps          | -              | Returns true or false depending if the host is https or not |
-| isLocalhost      | (array) ['127.0.0.1', '::1'] | Returns true or false depending on if the host is localhost or not |
-| **STRING** | | |
-| between          | string $content, string $start, string $end | Return string between two strings |
-| contains         | string $needle, array $haystack | Returns true or false depending on if the string is found in another string |
-| endsWith         | array $haystack, string $needle | Returns true or false depending on if the string ends with it |
-| obfuscate        | string $email | Return an obfuscated email address |
-| startsWith       | array $haystack, string $needle | Returns true or false depending on if the string starts with it |
-| removeWhitespace | string $string | Remove whitespace from a string |
-| replace          | string/array $mixed, $to | Alias for [strtr](https://www.php.net/manual/en/function.strtr.php) |
-| slug             | string $string | Convert $string to slug |
-| stripZeros        | string/float $value | Remove ending zeroes from a value |
+```php
+// Clean up array from empty values
+clean(array $array);
+
+// Returns the first value in an array
+first(array $array);
+
+// Returns the last value in an array
+last(array $array)
+```
+
+### File
+
+```php
+// Returns recursive folders as array
+recursiveFolders(string $path);
+
+// Like realpath but always return a path
+// https://www.php.net/manual/en/function.realpath.php
+path(string $path);
+```
+
+### Server
+
+```php
+// Returns the current url
+currentUrl();
+
+// Returns true or false depending if the host is https or not
+isHttps();
+
+// Returns true or false depending on if the host is localhost or not
+isLocalhost(array ['127.0.0.1', '::1']);
+```
+
+### String
+
+```php
+// Return string between two strings
+between(string $content, string $start, string );
+
+// Returns true or false depending on if the string is found in another string
+contains(string $needle, array $haystack);
+
+// Returns true or false depending on if the string ends with it
+endsWith(array $haystack, string $needle);
+
+// Return an obfuscated email address
+obfuscate(string $email);
+
+// Remove whitespace from a string
+removeWhitespace(string $string);
+
+// Alias for [strtr](https://www.php.net/manual/en/function.strtr.php)
+replace(array $mixed);
+replace(string $from, string $to);
+
+// Returns true or false depending on if the string starts with it
+startsWith(array $haystack, string $needle);
+
+// Convert $string to slug
+slug(string $string);
+
+// Remove ending zeroes from a value
+stripZeros(string);
+```
 
 ## Donate
 
