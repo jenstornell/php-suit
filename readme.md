@@ -1,6 +1,15 @@
 # Suit
 
-A small collection of helper functions.
+*Version 1.0* - [Changelog](changelog.md)
+
+The missing PHP functions.
+
+## In short
+
+- Small library, compared to others, for example [JBZoo Utils](https://github.com/JBZoo/Utils)
+- The function names are as short as possible
+- Unique, no duplicates of already existing PHP functions
+- No dependencies
 
 ## Functions
 
@@ -30,3 +39,11 @@ A small collection of helper functions.
 | replace          | string/array $mixed, $to | Alias for [strtr](https://www.php.net/manual/en/function.strtr.php) |
 | slug             | string $string | Convert $string to slug |
 | stripZeros        | string/float $value | Remove ending zeroes from a value |
+
+## Donate
+
+Donate to [DevoneraAB](https://www.paypal.me/DevoneraAB) if you want.
+
+## License
+
+MIT
