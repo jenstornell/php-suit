@@ -1,5 +1,8 @@
 <?php
+namespace Suit;
 include __DIR__ . '/../src/suit.php';
+
+#use Suit as suit;
 
 // Array
 $clean = clean(['a', '', 0, null, 'b']);

@@ -1,2 +1,2 @@
 <?php
-include __DIR__ . '/suit.php';
+include __DIR__ . '/src/suit.php';

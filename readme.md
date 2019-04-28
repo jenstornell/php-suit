@@ -77,6 +77,26 @@ stripZeros(string);
 slug(string $string);
 ```
 
+## In case of collisions
+
+### Namespaces
+
+The functions are made to be as short as possible. In case you run into collisions, you can add a namespace at the top of the files.
+
+```php
+namespace suit;
+```
+
+To make it work, you should also add the namespace you your files. Then you can use the same syntax as before.
+
+In case that is not possible you can use `use` like below:
+
+```php
+use suit as s;
+
+echo s\slug('Åäö');
+```
+
 ## Donate
 
 Donate to [DevoneraAB](https://www.paypal.me/DevoneraAB) if you want.

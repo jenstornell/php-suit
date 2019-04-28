@@ -1,4 +1,6 @@
 <?php
+namespace Suit;
+
 // cleanArray from empty values
 // https://stackoverflow.com/a/3654309/148496
 function clean($array) {
