@@ -15,7 +15,7 @@ A small collection of helper functions.
 | **FILE** | | |
 | recursiveFolders | (string) $path | Returns recursive folders as array |
 | read             | (string) $url  | Returns file contents or false
-| path             | (string) $path | Like [https://www.php.net/manual/en/function.realpath.php](realpath) but always return a path
+| path             | (string) $path | Like [realpath](https://www.php.net/manual/en/function.realpath.php) but always return a path
 | **SERVER**
 | currentUrl       | -              | Returns the current url |
 | isHttps          | -              | Returns true or false depending if the host is https or not |
@@ -27,6 +27,6 @@ A small collection of helper functions.
 | obfuscate        | string $email | Return an obfuscated email address |
 | startsWith       | array $haystack, string $needle | Returns true or false depending on if the string starts with it |
 | removeWhitespace | string $string | Remove whitespace from a string |
-| replace          | string/array $mixed, $to | Alias for [https://www.php.net/manual/en/function.strtr.php](strtr) |
+| replace          | string/array $mixed, $to | Alias for [strtr](https://www.php.net/manual/en/function.strtr.php) |
 | slug             | string $string | Convert $string to slug |
 | stripZeros        | string/float $value | Remove ending zeroes from a value |
