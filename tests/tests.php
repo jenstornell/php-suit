@@ -51,10 +51,6 @@ if($slug != 'aao') echo 'slug';
 $startswith = starts_with('Hello world', 'Hell');
 if($startswith === false) echo 'startswith';
 
-
-/*
-// strip
-function strip($string) {
-  return preg_replace('/\s+/', '', $string);
-}
-*/
+$strip = strip(" Hej åäö\n
+abc ");
+if($strip != 'Hej åäö abc') echo 'strip';

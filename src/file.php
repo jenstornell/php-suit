@@ -11,19 +11,21 @@ function files($path, $type = null, $regex = false) {
   }
 
   foreach($iterator as $item) {
+    if($item->isDot()) continue;
+
     switch($type) {
       case 'files':
         if(!$item->isDir()) {
-          $items[] = (string)$item;
+          $items[] = $item->getPathname();
         }
         break;
       case 'folders':
         if($item->isDir()) {
-          $items[] = (string)$item;
+          $items[] = $item->getPathname();
         }
         break;
       default:
-        $items[] = (string)$item;
+        $items[] = $item->getPathname();
     }
   }
   return $items;
@@ -52,16 +54,16 @@ function rfiles($path, $type = null, $regex = null) {
     switch($type) {
       case 'files':
         if(!$item->isDir()) {
-          $items[] = (string)$item;
+          $items[] = $item->getPathname();
         }
         break;
       case 'folders':
         if($item->isDir()) {
-          $items[] = (string)$item;
+          $items[] = $item->getPathname();
         }
         break;
       default:
-        $items[] = (string)$item;
+        $items[] = $item->getPathname();
     }
   }
 

@@ -1,16 +1,17 @@
 # PHP Suit
 
-*Version 1.0* - [Changelog](changelog.md)
+*Version 1.1* - [Changelog](changelog.md)
 
 The missing PHP functions. Grab the whole library, or just pick the function you need.
 
 ## In short
 
-- Small library, compared to others, for example [JBZoo Utils](https://github.com/JBZoo/Utils)
+- Small library
 - The function names are as short as possible
 - The function names uses underscores just like native PHP
 - No duplicates of already existing PHP functions
 - No dependencies
+- No namespaces or classes
 
 ## Functions
 
@@ -74,6 +75,7 @@ between(string $content, string $start, string $end);
 obfuscate(string $email);
 
 // Remove whitespace from a string
+// Remove newlines, tabs, double spaces and trim spaces before and after
 strip(string $string);
 
 // Convert $string to slug
