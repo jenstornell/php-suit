@@ -23,8 +23,13 @@ if(count($rfiles) != 2) echo 'rfiles';
 
 // Server
 
+$_GET = ['hello' => 'world'];
+if(_get('hello') != 'world') return '_get';
+
 if(current_url() != 'http://localhost/misc/suit/tests/tests.php')
 echo 'currentUrl';
+
+if(ip() != '::1') echo 'ip';
 
 if(is_https() === true) echo 'isHttps';
 
@@ -54,3 +59,7 @@ if($startswith === false) echo 'startswith';
 $strip = strip(" Hej åäö\n
 abc ");
 if($strip != 'Hej åäö abc') echo 'strip';
+
+if(limit('Jag ål', 5) != 'Jag å...') echo 'limit';
+
+if(word_limit('Lö Vårö Lä Lå', 2) != 'Lö Vårö...') echo 'word_limit';

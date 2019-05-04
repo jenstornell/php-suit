@@ -24,6 +24,13 @@ function ends_with($haystack, $needle) {
   return (substr($haystack, -$length) === $needle);
 }
 
+// limit
+// https://github.com/clausnz/php-helpers#str_limit
+function limit($string, $limit = 100, $end = '...') {
+  if(mb_strwidth($string, 'UTF-8') <= $limit) return $string;
+  return rtrim(mb_strimwidth($string, 0, $limit, '', 'UTF-8')) . $end;
+}
+
 // obfuscate email
 function obfuscate($email) {
     $out = '';
@@ -68,4 +75,12 @@ function starts_with($haystack, $needle) {
 // strip
 function strip($string) {
   return trim(preg_replace('/\s+/', ' ', $string));
+}
+
+// word_limit
+// https://github.com/clausnz/php-helpers#str_limit_words
+function word_limit($string, $limit = 10, $end = '...') {
+  $words = explode(' ', $string);
+  if (sizeof($words) <= $limit) return $string;
+  return implode(' ', array_slice($words, 0, $limit)) . $end;
 }

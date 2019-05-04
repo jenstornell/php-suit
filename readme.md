@@ -1,6 +1,6 @@
 # PHP Suit
 
-*Version 1.1* - [Changelog](changelog.md)
+*Version 1.2* - [Changelog](changelog.md)
 
 The missing PHP functions. Grab the whole library, or just pick the function you need.
 
@@ -14,19 +14,6 @@ The missing PHP functions. Grab the whole library, or just pick the function you
 - No namespaces or classes
 
 ## Functions
-
-### Array
-
-```php
-// Clean up array from empty values
-clean(array $array);
-
-// Returns the first value in an array
-first(array $array);
-
-// Returns the last value in an array
-last(array $array)
-```
 
 ### File
 
@@ -101,6 +88,13 @@ use suit as s;
 
 echo s\slug('Åäö');
 ```
+
+## Other sites used
+
+Some functions are taken from other sources. For more details, see the code where there are links directly to the soruces.
+
+- https://stackoverflow.com
+- https://github.com/clausnz/php-helpers
 
 ## Similar libraries
 
